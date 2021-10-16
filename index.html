@@ -6,7 +6,7 @@
   </head>
   <body>
     <!-- FILL IN YOUR SCORE BOARD HTML CODE HERE -->
-    <table>
+    <table id="fieldTbl">
       <tr>
         <th colspan="9" style="font-size: 28px">DAVID FIELD</th>
       </tr>
@@ -52,6 +52,35 @@
       </tr>
       <tr colspan="9">
         &nbsp;
+      </tr>
+    </table>
+
+    <table id="ctrCenter">
+      <tr>
+        <th name="Control Center" colspan="4">CONTROL CENTER</th>
+      </tr>
+      <tr>
+        <td>
+          <label for="who">Who:</label>
+        </td>
+        <td>
+          <select name="" id="who">
+            <option value="away">Away</option>
+            <option value="home">Home</option>
+          </select>
+        </td>
+        <td>Inning:</td>
+        <td>BUTTON HERE</td>
+      </tr>
+      <tr>
+        <td>Runs:</td>
+        <td>BUTTONS X2 HERE</td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td>Sound:</td>
+        <td>BUTTONS X2 HERE</td>
+        <td colspan="2"></td>
       </tr>
     </table>
     <script src="app.js"></script>
