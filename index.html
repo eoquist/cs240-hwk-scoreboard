@@ -55,33 +55,41 @@
       </tr>
     </table>
 
-    <table id="ctrCenter">
+    <table id="ctlCenter">
       <tr>
-        <th name="Control Center" colspan="4">CONTROL CENTER</th>
+        <th name="Control Center" colspan="4" style="font-size: 28px">
+          CONTROL CENTER
+        </th>
       </tr>
       <tr>
         <td>
           <label for="who">Who:</label>
         </td>
         <td>
-          <select name="" id="who">
+          <select name="who" id="who">
             <option value="away">Away</option>
             <option value="home">Home</option>
           </select>
         </td>
-        <label for="inning">Inning:</label>
         <td>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
+          <label for="inning">Inning:</label>
+        </td>
+        <td>
+          <select name="inning" id="inning">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+          </select>
         </td>
       </tr>
       <tr>
-        <label for="runs">Runs:</label>
+        <td>
+          <label for="runs">Runs:</label>
+        </td>
         <td>
           <button id="run++">+</button>
           <button id="run--">-</button>
@@ -89,7 +97,9 @@
         <td colspan="2"></td>
       </tr>
       <tr>
-        <label for="sound">Sound:</label>
+        <td>
+          <label for="sound">Sound:</label>
+        </td>
         <td>
           <button id="cheer">📣</button>
           <button id="song">🎶</button>
