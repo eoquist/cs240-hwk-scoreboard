@@ -1,17 +1,13 @@
 /* Your CSS definitions here */
 body {
+  background-color: rgb(50, 100, 85);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: white;
 }
 
 table {
-  border: 0ch;
-  padding: 10px;
-  margin: 10;
-  height: 30px;
-  background-color: rgb(50, 100, 85);
-  border: 10px solid white;
+  border: 5px solid white;
 
   font-weight: bold;
   text-align: center;
@@ -19,16 +15,27 @@ table {
   border-spacing: 5px;
 }
 
+tr.inningNum {
+  vertical-align: text-bottom;
+  vertical-align: bottom;
+}
+
 td {
-  border: 2px solid black;
+  height: 25px;
+  width: 18px;
+  border: 3px;
   font-weight: normal;
 }
 
-th {
-  border: 2px solid white;
-  font-weight: normal;
+td.innings {
+  border: solid black;
 }
 
-h1 {
-  font-size: 28px;
+td.runs {
+  border: solid white;
+}
+
+img {
+  vertical-align: bottom;
+  size: 120px;
 }
