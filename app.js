@@ -1,4 +1,4 @@
 /**
  * Scoreboard Homework
- * @author 
+ * @author Emilee Oquist
  */
