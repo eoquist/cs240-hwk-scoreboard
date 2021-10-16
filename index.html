@@ -8,9 +8,9 @@
     <!-- FILL IN YOUR SCORE BOARD HTML CODE HERE -->
     <table>
       <tr>
-        <th name="Field Name">DAVID FIELD</th>
+        <th colspan="9" style="font-size: 28px">DAVID FIELD</th>
       </tr>
-      <tr>
+      <tr class="inningNum">
         <th></th>
         <th>1</th>
         <th>2</th>
@@ -20,6 +20,13 @@
         <th>6</th>
         <th>7</th>
         <th>R</th>
+        <th rowspan="9">
+          <img
+            class="icon"
+            src="images/ups.png"
+            style="width: 120px; height: 120px"
+          />
+        </th>
       </tr>
       <tr>
         <th>AWAY</th>
@@ -42,6 +49,9 @@
         <td id="home6" class="innings">0</td>
         <td id="home7" class="innings">0</td>
         <td id="homeR" class="runs">0</td>
+      </tr>
+      <tr colspan="9">
+        &nbsp;
       </tr>
     </table>
     <script src="app.js"></script>
