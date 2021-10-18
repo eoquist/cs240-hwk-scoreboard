@@ -3,19 +3,22 @@
  * @author Emilee Oquist
  */
 
-// later idea: fill arrays with pathnames
+// later research possibility of getting an array of path names in a directory? 
 var $imgs = ["images/ups.png", "images/megaphone.png", "images/sdchicken.jpg"],
     $sfx = ["sounds/buildup.mp3", "sounds/charge1.mp3", "sounds/charge2.mp3"],
     $song = "sounds/chickendance.mp3";
 
-// get running total from score boxes
+/**
+ * Get total from across all score boxes
+ * @param {*} teamName is a string of the teamname used to identity the id of the scorebox
+ * @returns total of all score boxes in specified team
+ */
 function getTotal(teamName) {
     var total = 0;
     for (i = 1; i <= 7; i++) {
         var $id = teamName + i;
         total += parseInt(document.getElementById($id).textContent);
     }
-    console.log(total);
     return total;
 }
 
@@ -24,9 +27,9 @@ document.getElementById("run++").addEventListener("click", function () {
     var $team = document.querySelector("#who").value,
         $inning = document.querySelector("#inning").value,
         $id = $team.concat($inning),
-        $idVal = document.getElementById($id).textContent,
-        scoreChange = document.getElementById($id).innerHTML = parseInt($idVal) + 1;
-    document.getElementById($team.concat('R')).innerHTML = getTotal($team);
+        $idVal = document.getElementById($id).textContent;
+    document.getElementById($id).innerHTML = parseInt($idVal) + 1; // update selected box
+    document.getElementById($team.concat('R')).innerHTML = getTotal($team); // update total
 });
 document.getElementById("run--").addEventListener("click", function () {
     var $team = document.querySelector("#who").value,
@@ -34,8 +37,8 @@ document.getElementById("run--").addEventListener("click", function () {
         $id = $team.concat($inning),
         $idVal = document.getElementById($id).textContent;
     if ($idVal > 0) { // make sure the run score can never be negative
-        var scoreChange = document.getElementById($id).innerHTML = parseInt($idVal) - 1;
-        document.getElementById($team.concat('R')).innerHTML = getTotal($team);
+        document.getElementById($id).innerHTML = parseInt($idVal) - 1; // update selected box
+        document.getElementById($team.concat('R')).innerHTML = getTotal($team); // update total
     }
 });
 
